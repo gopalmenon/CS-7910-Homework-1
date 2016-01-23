@@ -89,23 +89,23 @@ The circuit satisfiability ($CSAT$) problem is NP-Complete. This means that
 \item $CSAT \in NP$ and
 \item for all problems $Y \in NP$, $Y \leq_P CSAT$ 
 \end{enumerate}
-This means that every problem $Y$ in $NP$ can be reduced to $CSAT$. Or in other words, $CSAT$ is at least as hard as the hardest problem in $NP$. The set $NP-Complete$ is a subset of $NP$ as shown in figure \ref{P-NP}. So $CSAT$ is at least as hard as any $NP-Complete$ problem. This means that if if a polynomial time algorithm can be used to solve $CSAT$, then every other $NP-Complete$ problem can be solved in polynomial time since it would be easier or at most as difficult as $CSAT$.
+This means that every problem $Y$ in $NP$ can be reduced to $CSAT$. Or in other words, $CSAT$ is at least as hard as the hardest problem in $NP$. The set $NP-Complete$ is a subset of $NP$ as shown in figure \ref{P-NP}. So $CSAT$ is at least as hard as any $NP-Complete$ problem. This means that if if a polynomial time algorithm can be used to solve $CSAT$, then every other $NP-Complete$ problem (which will be in $NP$) can be solved in polynomial time since it would be easier or at most as difficult as $CSAT$. So the statement is true.
 
     \item \textit{If no polynomial time algorithm can solve the SAT problem, then no polynomial time algorithm can solve the circuit satisfiability problem.}
     
-    The $CSAT$ problem can be reduced to the $SAT$ problem as we saw in class. This means that $CSAT \leq_P SAT$. i.e. the $SAT$ problem is at least as hard if not harder than $CSAT$. If no polynomial time algorithm can be used to solve the $SAT$ problem, it does not follow from this that no polynomial time algorithm can be used to solve the $CSAT$ problem. However since all $NP$ problems can be reduced to an $NP-Complete$ problem, and since we know that $CSAT$ is an $NP-Complete$ problem, it follows that $SAT \leq_P CSAT$. Since no polynomial time algorithm can be used to solve the $SAT$ problem, it follows that no polynomial time algorithm can be used to solve the $CSAT$ problem which is at least as hard as the $SAT$ problem.
+    The $CSAT$ problem can be reduced to the $SAT$ problem as we saw in class. This means that $CSAT \leq_P SAT$. i.e. the $SAT$ problem is at least as hard if not harder than $CSAT$. If no polynomial time algorithm can be used to solve the $SAT$ problem, it does not follow from this that no polynomial time algorithm can be used to solve the $CSAT$ problem. However since all $NP$ problems can be reduced to an $NP-Complete$ problem, and since we know that $CSAT$ is an $NP-Complete$ problem, it follows that $SAT \leq_P CSAT$. Since no polynomial time algorithm can be used to solve the $SAT$ problem, it follows that no polynomial time algorithm can be used to solve the $CSAT$ problem which is at least as hard as the $SAT$ problem. So the statement is true.
     
     \item \textit{$NP$ is the union of $P$ and $NPC$.}
     
-    If $P=NP$ and since $NPC \subseteq NP$, in this case $NP = P \cup NPC$. But it is unlikely that $P=NP$. Since $NPC$ problems are the hardest $NP$ problems, the relation $NP = P \cup NPC$ can only be satisfied if $NP - P = NPC$. i.e. if each $NP$ problem that cannot be solved in polynomial time can be reduced to any other $NP$ problem in polynomial time.
+    If $P=NP$ and since $NPC \subset NP$, in this case $NP = P \cup NPC$. But it is unlikely that $P=NP$. Since $NPC$ problems are the hardest $NP$ problems, the relation $NP = P \cup NPC$ can only be satisfied if $NP - P = NPC$ (as in figure \ref{PuNPC}). i.e. if each $NP$ problem that cannot be solved in polynomial time can be reduced to any other $NP$ problem in polynomial time. This seems unlikely as it would mean that the $NP$ problems that cannot be solved is polynomial time are all NP complete. So the statement is not true.
     
     \item \textit{If there is an $NPC$ problem $A$ that is also in $P$, then $NP$ is the union of $P$ and $NPC$.}
     
-Since the $NPC$ problem $A$ is in $NP$ and is as hard or harder than any problem in $NP$, if $A$ is in $P$, then every problem in $NP$ can be solved in polynomial time. In other words $P=NP$. Since $NPC \subseteq NP$, it follows that $NP = P \cup NPC$.
+Since the $NPC$ problem $A$ is in $NP$ and is as hard or harder than any problem in $NP$, if $A$ is in $P$, then every problem in $NP$ can be solved in polynomial time. In other words $P=NP$. Since $NPC \subset NP$, it follows that $NP = P \cup NPC$. So the statement is true.
     
     \item \textit{If no problem of $NPC$ is in $P$, then $NP$ is the union of $P$ and $NPC$.}
     
-If no problem in $NPC$ is in $P$, it just means that these are two disjoint sets. Since $NPC$ problems are those that are in $NP$ and can be reduced from all $NP$ problems in polynomial time, there could be some $NP$ problems that cannot be reduced from other $NP$ problems in polynomial time. In this case $NP$ cannot be the union of $P$ and $NPC$, since this union will not include those $NP$ problems that cannot be reduced from other $NP$ problems in polynomial time.
+If no problem in $NPC$ is in $P$, it just means that these are two disjoint sets. Since $NPC$ problems are those that are in $NP$ and can be reduced from all $NP$ problems in polynomial time, there could be some $NP$ problems that cannot be reduced from other $NP$ problems in polynomial time. In this case $NP$ cannot be the union of $P$ and $NPC$, since this union will not include those $NP$ problems that cannot be reduced from other $NP$ problems in polynomial time. This is the situation shown in figure \ref{P-NP}. So the statement is not true.
     
     \item \textit{If $NP$ is the union of $P$ and $NPC$, then $P=NP$.}
     
@@ -116,7 +116,7 @@ If no problem in $NPC$ is in $P$, it just means that these are two disjoint sets
 		\label{PuNPC}
 	\end{figure}     
     
-If $NP=P \cup NPC$, then it means that each $NP$ problem that is not in $P$, can be converted to any other $NP$ problem that is not in $P$. The situation can be the one as shown in figure \ref{PuNPC}. Here $NP$ is the entire yellow ellipse and P is the part of the ellipse that does not include $NPC$. So in this case $P \neq NP$.
+If $NP=P \cup NPC$, then it means that each $NP$ problem that is not in $P$, can be converted to any other $NP$ problem that is not in $P$. The situation can be the one as shown in figure \ref{PuNPC}. Here $NP$ is the entire yellow ellipse and P is the part of the ellipse that does not include $NPC$. So in this case $P \neq NP$. So the statement is not true.
     
   \end{enumerate}
   
@@ -129,6 +129,10 @@ If $NP=P \cup NPC$, then it means that each $NP$ problem that is not in $P$, can
 		\caption{An instance of the circuit satisfiability problem}
 		\label{CSAT}
 	\end{figure}  
+
+
+
+
 
 
 \end{enumerate}
