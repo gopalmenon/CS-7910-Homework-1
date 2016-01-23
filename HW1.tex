@@ -100,9 +100,28 @@ This means that every problem $Y$ in $NP$ can be reduced to $CSAT$. Or in other 
     If $P=NP$ and since $NPC \subseteq NP$, in this case $NP = P \cup NPC$. But it is unlikely that $P=NP$. Since $NPC$ problems are the hardest $NP$ problems, the relation $NP = P \cup NPC$ can only be satisfied if $NP - P = NPC$. i.e. if each $NP$ problem that cannot be solved in polynomial time can be reduced to any other $NP$ problem in polynomial time.
     
     \item \textit{If there is an $NPC$ problem $A$ that is also in $P$, then $NP$ is the union of $P$ and $NPC$.}
+    
+Since the $NPC$ problem $A$ is in $NP$ and is as hard or harder than any problem in $NP$, if $A$ is in $P$, then every problem in $NP$ can be solved in polynomial time. In other words $P=NP$. Since $NPC \subseteq NP$, it follows that $NP = P \cup NPC$.
+    
     \item \textit{If no problem of $NPC$ is in $P$, then $NP$ is the union of $P$ and $NPC$.}
+    
+If no problem in $NPC$ is in $P$, it just means that these are two disjoint sets. Since $NPC$ problems are those that are in $NP$ and can be reduced from all $NP$ problems in polynomial time, there could be some $NP$ problems that cannot be reduced from other $NP$ problems in polynomial time. In this case $NP$ cannot be the union of $P$ and $NPC$, since this union will not include those $NP$ problems that cannot be reduced from other $NP$ problems in polynomial time.
+    
     \item \textit{If $NP$ is the union of $P$ and $NPC$, then $P=NP$.}
+    
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[width=2.5in]{PuNPC.png}
+		\caption{When $NP=P \cup NPC$}
+		\label{PuNPC}
+	\end{figure}     
+    
+If $NP=P \cup NPC$, then it means that each $NP$ problem that is not in $P$, can be converted to any other $NP$ problem that is not in $P$. The situation can be the one as shown in figure \ref{PuNPC}. Here $NP$ is the entire yellow ellipse and P is the part of the ellipse that does not include $NPC$. So in this case $P \neq NP$.
+    
   \end{enumerate}
+  
+  \item \textit{In class we studied a polynomial time problem reduction from the circuit satisfiability problem to the SAT problem. The following figure shows an instance of the circuit satisfiability problem. Give the SAT problem instance constructed from it based on the problem reduction we studied in class, i.e., give the Boolean variables and the clauses for the SAT problem instance.}
+
   
 	\begin{figure}[!h]
 		\centering
@@ -110,8 +129,8 @@ This means that every problem $Y$ in $NP$ can be reduced to $CSAT$. Or in other 
 		\caption{An instance of the circuit satisfiability problem}
 		\label{CSAT}
 	\end{figure}  
-  
-  \item \textit{In class we studied a polynomial time problem reduction from the circuit satisfiability problem to the SAT problem. The following figure shows an instance of the circuit satisfiability problem. Give the SAT problem instance constructed from it based on the problem reduction we studied in class, i.e., give the Boolean variables and the clauses for the SAT problem instance.}
+
+
 \end{enumerate}
 
 
