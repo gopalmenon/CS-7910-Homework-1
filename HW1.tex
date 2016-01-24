@@ -125,15 +125,62 @@ If $NP=P \cup NPC$, then it means that each $NP$ problem that is not in $P$, can
   
 	\begin{figure}[!h]
 		\centering
-		\includegraphics[width=2.5in]{CSAT.png}
+		\includegraphics[width=3.5in]{CSAT.png}
 		\caption{An instance of the circuit satisfiability problem}
 		\label{CSAT}
 	\end{figure}  
 
+The inputs to the nodes have been marked $X_a$, $X_b$, $X_c$, $X_d$ and $X_e$. The final output is marked $X_k$ as shown in figure \ref{CSAT}.\\
 
+Given this instance of $CSAT$, we need to construct an equivalent instance of $SAT$.\\
 
+The output of the $AND$ operation will always be $0$ as one of the inputs is $0$. The equivalent clause will be 
 
+$$
+C_{AND} = \overline{X_d}
+$$
 
+The clauses for the $NOT$ operation will be
+
+$$
+C_{NOT_1} = X_e \lor X_c
+$$
+
+$$
+C_{NOT_2} = \overline{X_e} \lor \overline{X_c}
+$$
+
+The clauses for the OR operation are
+
+$$
+C_{OR_1} = X_k \lor \overline{X_d}
+$$
+
+$$
+C_{OR_2} = X_k \lor \overline{X_e}
+$$
+
+$$
+C_{OR_3} = \overline{X_k} \lor X_d \lor X_e
+$$
+
+The clause for guaranteeing that the output is $1$ will be
+
+$$
+C_{OUTPUT} = X_k
+$$
+
+The clause for the constant input is
+
+$$
+C_{CONSTANT.INPUT} = \overline{X_a}
+$$ 
+
+These clauses will cause the following conjunction to evaluate to $1$.
+
+$$
+C_{AND} \land C_{NOT_1} \land C_{NOT_2} \land C_{OR_1} \land C_{OR_2} \land C_{OR_3} \land C_{OUTPUT} \land {C_{CONSTANT.INPUT}}
+$$
 
 \end{enumerate}
 

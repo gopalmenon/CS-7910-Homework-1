@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.12)  23 JAN 2016 16:48
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.12)  23 JAN 2016 18:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -742,29 +742,38 @@ File: PuNPC.png Graphic file (type png)
 Package pdftex.def Info: PuNPC.png used on input line 114.
 (pdftex.def)             Requested size: 180.67499pt x 105.10983pt.
  [2 <./PuNPC.png>]
-<CSAT.png, id=14, 272.01625pt x 158.5925pt>
+<CSAT.png, id=14, 331.2375pt x 241.90375pt>
 File: CSAT.png Graphic file (type png)
  <use CSAT.png>
 Package pdftex.def Info: CSAT.png used on input line 128.
-(pdftex.def)             Requested size: 180.67499pt x 105.34409pt.
- [3 <./CSAT.png>]
-(./HW1.aux) ) 
+(pdftex.def)             Requested size: 252.94499pt x 184.72725pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--134
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--136
+
+ []
+
+[3 <./CSAT.png>] [4] (./HW1.aux) ) 
 Here is how much of TeX's memory you used:
- 6500 strings out of 493304
- 94747 string characters out of 6139870
+ 6502 strings out of 493304
+ 94764 string characters out of 6139870
  207036 words of memory out of 5000000
  9797 multiletter control sequences out of 15000+600000
- 73874 words of font info for 94 fonts, out of 8000000 for 9000
+ 74301 words of font info for 96 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 63i,10n,49p,773b,380s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/s
-hare/texlive/texmf-dist/fonts/type1/public/fourier/fourier-ms.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></usr/share/texlive/texmf
--dist/fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on HW1.pdf (3 pages, 72973 bytes).
+ 63i,11n,49p,773b,380s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvip
+s/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/fourier/fourier
+-ms.pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb>
+Output written on HW1.pdf (4 pages, 78366 bytes).
 PDF statistics:
- 30 PDF objects out of 1000 (max. 8388607)
- 18 compressed objects within 1 object stream
+ 33 PDF objects out of 1000 (max. 8388607)
+ 20 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
