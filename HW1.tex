@@ -97,11 +97,11 @@ This means that every problem $Y$ in $NP$ can be reduced to $CSAT$. Or in other 
     
     \item \textit{$NP$ is the union of $P$ and $NPC$.}
     
-    If $P=NP$ and since $NPC \subset NP$, in this case $NP = P \cup NPC$. But it is unlikely that $P=NP$. Since $NPC$ problems are the hardest $NP$ problems, the relation $NP = P \cup NPC$ can only be satisfied if $NP - P = NPC$ (as in figure \ref{PuNPC}). i.e. if each $NP$ problem that cannot be solved in polynomial time can be reduced to any other $NP$ problem in polynomial time. This seems unlikely as it would mean that the $NP$ problems that cannot be solved is polynomial time are all NP complete. So the statement is not true.
+    If $P=NP$ and since $NPC \subset NP$, in this case $NP = P \cup NPC$. But it is unlikely that $P=NP$. Since $NPC$ problems are the hardest $NP$ problems, the relation $NP = P \cup NPC$ can only be satisfied if $NP - P = NPC$ (as in figure \ref{PuNPC}). i.e. if each $NP$ problem that cannot be solved in polynomial time can be reduced to any other $NP$ problem in polynomial time. This seems unlikely as it would mean that the $NP$ problems that cannot be solved in polynomial time are all NP complete. So the statement is not true.
     
     \item \textit{If there is an $NPC$ problem $A$ that is also in $P$, then $NP$ is the union of $P$ and $NPC$.}
     
-Since the $NPC$ problem $A$ is in $NP$ and is as hard or harder than any problem in $NP$, if $A$ is in $P$, then every problem in $NP$ can be solved in polynomial time. In other words $P=NP$. Since $NPC \subset NP$, it follows that $NP = P \cup NPC$. So the statement is true.
+Since the $NPC$ problem $A$ is in $NP$ and is as hard or harder than any problem in $NP$, if $A$ is in $P$, then every problem in $NP$ can be solved in polynomial time. In other words $P=NP$. $NPC \subset NP$, and since $P=NP$, it follows that $NPC \subset P$. From this we can see that $NP = P \cup NPC$. The reason is that the union of a set and its subset is still the set. So the statement is true.
     
     \item \textit{If no problem of $NPC$ is in $P$, then $NP$ is the union of $P$ and $NPC$.}
     
@@ -176,7 +176,7 @@ $$
 C_{CONSTANT.INPUT} = \overline{X_a}
 $$ 
 
-These clauses will cause the following conjunction to evaluate to $1$.
+These clauses will cause the following conjunction to evaluate to $1$ when $CSAT$ evaluates to $1$. So the following conjunction of clauses is the $SAT$ problem instance.
 
 $$
 C_{AND} \land C_{NOT_1} \land C_{NOT_2} \land C_{OR_1} \land C_{OR_2} \land C_{OR_3} \land C_{OUTPUT} \land {C_{CONSTANT.INPUT}}
